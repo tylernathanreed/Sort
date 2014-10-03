@@ -1,0 +1,67 @@
+//* Description *//
+// Title: Abstract Sort
+// Author: Tyler Reed
+// Defines an Abstract Sorting Algorithm
+
+//* Package *//
+package Sort;
+
+//* Libraries *//
+import java.util.List;
+
+//* Abstract Sort Class *//
+public abstract class AbstractSort<T extends Comparable<? super T>>
+{
+	//* Class Variables *//
+	protected List<T> list;
+
+	//* Constructor *//
+	public AbstractSort(List<T> list)
+	{
+		this.list = list;
+	}
+
+	//* Abstract Methods *//
+	// Sorts the Class List in Ascending Order
+	public List<T> sort()
+	{
+		return sort(true);
+	}
+
+	// Sorts the Class List in the specified Order
+	public abstract List<T> sort(boolean ascending);
+
+	//* Utility Methods *//
+	// Returns whether or not all Collections within the specified List are Empty
+	protected static <T extends Comparable<? super T>> boolean isEmpty(List<List<T>> split)
+	{
+		for(List<T> list : split)
+			if(!list.isEmpty())
+				return false;
+
+		return true;
+	}
+
+	// Returns the Number of Empty Collections within the specified List
+	protected static <T extends Comparable<? super T>> int getRemainingCount(List<List<T>> split)
+	{
+		int count = 0;
+
+		for(List<T> list : split)
+			if(!list.isEmpty())
+				count++;
+
+		return count;
+	}
+
+	// Returns the Total Size of all Nested Collections
+	protected static <T extends Comparable<? super T>> int getSize(List<List<T>> split)
+	{
+		int size = 0;
+
+		for(List<T> list : split)
+			size += list.size();
+
+		return size;
+	}
+}
