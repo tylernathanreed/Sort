@@ -23,7 +23,7 @@ public class Main
 	public static void main(String[] args) throws FileNotFoundException
 	{
 		// Determine the Output Stream
-		// System.setOut(new PrintStream(new File("output.txt")));
+		// System.setOut(new PrintStream(new File("res/output.txt")));
 		// Create a Random Generator
 		Random generator = new Random();
 		generator.setSeed(0);
