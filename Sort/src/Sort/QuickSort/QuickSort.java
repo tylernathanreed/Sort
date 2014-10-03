@@ -162,7 +162,7 @@ public class QuickSort<T extends Comparable<? super T>> extends AbstractSort<T>
 		// Runs the Thread
 		public void run()
 		{
-			System.out.println("Running Thread: " + thread);
+			//System.out.println("Running Thread: " + thread);
 			QuickSort.qsort(list, left, right, ascending);
 		}
 	}

@@ -12,18 +12,9 @@ import java.util.List;
 //* Abstract Sort Class *//
 public abstract class AbstractSort<T extends Comparable<? super T>>
 {
-	//* Class Variables *//
-	protected List<T> list;
-
-	//* Constructor *//
-	public AbstractSort(List<T> list)
-	{
-		this.list = list;
-	}
-
 	//* Abstract Methods *//
 	// Sorts the Class List in Ascending Order
-	public List<T> sort()
+	public static <T extends Comparable<? super T>> List<T> sort()
 	{
 		return sort(true);
 	}

@@ -21,20 +21,7 @@ public class MergeSort<T extends Comparable<? super T>> extends AbstractSort<T>
 	public static volatile int THREAD_COUNT = 0;
 	public static volatile int THREAD_MAX = 32;
 
-	//* Constructor *//
-	// Creates an Instance of Merge Sort
-	public MergeSort(List<T> list)
-	{
-		super(list);
-	}
-
 	//* Sort Methods *//
-	// Non-Static Version of Merge Sort
-	public List<T> sort(boolean ascending)
-	{
-		return sort(list, ascending);
-	}
-
 	// Returns a Sorted Version of the specified List of Comparable Elements
 	public static <T extends Comparable<? super T>> List<T> sort(List<T> list)
 	{
