@@ -13,7 +13,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import Sort.Sort;
-import Sort.QuickSort.QuickSort;
 
 //* Main Class *//
 public class Main
@@ -26,6 +25,9 @@ public class Main
 		int seed = seed(args);
 		String sortType = sortType(args);
 		int length = length(args);
+
+		// Hard-Coded Arguments
+		sortType = "quick";
 
 		// Display Command Line Parameters
 		System.out.println("Recognized Parameters:");
@@ -78,7 +80,7 @@ public class Main
 
 		System.out.println("Final Collection: " + list);
 
-		System.out.println("Finished in " + time + " ms (Using " + QuickSort.Helper.TOTAL + " Threads) with " + QuickSort.COMPARISONS + " Comparisons (nlgn: " + (int) Math.ceil(Math.log(length) / Math.log(2) * length) + ", nn: " + (int) Math.pow(length,  2) + ")");
+		System.out.println("Finished in " + time + " ms (Using " + Sort.getLastThreadCount() + " Threads) with " + Sort.getLastComparisonCount() + " Comparisons (nlgn: " + (int) Math.ceil(Math.log(length) / Math.log(2) * length) + ", nn: " + (int) Math.pow(length,  2) + ")");
 	}
 
 	//* Command Line Methods *//

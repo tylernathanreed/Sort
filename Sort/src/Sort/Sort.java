@@ -29,6 +29,9 @@ public final class Sort
 		MergeSort.sort(list);
 		stop();
 
+		threads = MergeSort.THREAD_COUNT;
+		comparisons = MergeSort.COMPARISONS;
+
 		return list;
 	}
 
@@ -38,6 +41,9 @@ public final class Sort
 		start();
 		QuickSort.sort(list);
 		stop();
+
+		threads = QuickSort.Helper.TOTAL;
+		comparisons = QuickSort.COMPARISONS;
 
 		return list;
 	}

@@ -12,27 +12,14 @@ import java.util.List;
 import Sort.AbstractSort;
 
 //* Quick Sort Class *//
-public class QuickSort<T extends Comparable<? super T>> extends AbstractSort<T>
+public final class QuickSort<T extends Comparable<? super T>> extends AbstractSort<T>
 {
 	//* Class Variables *//
 	// Public Variables
 	public static volatile int COMPARISONS = 0;
 	public static volatile boolean THREADED = true;
 
-	//* Constructor *//
-	// Creates an Instance of Merge Sort
-	public QuickSort(List<T> list)
-	{
-		super(list);
-	}
-
 	//* Sort Methods *//
-	// Non-Static Version of Merge Sort
-	public List<T> sort(boolean ascending)
-	{
-		return sort(list, ascending);
-	}
-
 	// Returns a Sorted Version of the specified List of Comparable Elements
 	public static <T extends Comparable<? super T>> List<T> sort(List<T> list)
 	{
@@ -46,17 +33,16 @@ public class QuickSort<T extends Comparable<? super T>> extends AbstractSort<T>
 		if(list.size() == 1)
 			return list;
 
-		qsort(list, 0, list.size() - 1, ascending);
-		return list;
+		return qsort(list, 0, list.size() - 1, ascending);
 	}
 
 	//* List Methods *//
 	// Recursively Sorts the List using Partitioning
-	private static <T extends Comparable<? super T>> void qsort(List<T> list, int left, int right, boolean ascending)
+	private static <T extends Comparable<? super T>> List<T> qsort(List<T> list, int left, int right, boolean ascending)
 	{
 		// Validate the Bounds
 		if(left >= right)
-			return;
+			return list;
 
 		int pivot = partition(list, left, right);
 
@@ -88,6 +74,8 @@ public class QuickSort<T extends Comparable<? super T>> extends AbstractSort<T>
 				{
 					ex.printStackTrace();
 				}
+
+		return list;
 	}
 
 	// Partitions the specified Range within the specified List

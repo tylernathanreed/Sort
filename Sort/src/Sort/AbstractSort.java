@@ -8,19 +8,23 @@ package Sort;
 
 //* Libraries *//
 import java.util.List;
+import javax.naming.OperationNotSupportedException;
 
 //* Abstract Sort Class *//
 public abstract class AbstractSort<T extends Comparable<? super T>>
 {
 	//* Abstract Methods *//
 	// Sorts the Class List in Ascending Order
-	public static <T extends Comparable<? super T>> List<T> sort()
+	public static <T extends Comparable<? super T>> List<T> sort(List<T> list) throws OperationNotSupportedException
 	{
-		return sort(true);
+		return sort(list, true);
 	}
 
 	// Sorts the Class List in the specified Order
-	public abstract List<T> sort(boolean ascending);
+	public static <T extends Comparable<? super T>> List<T> sort(List<T> list, boolean ascending) throws OperationNotSupportedException
+	{
+		throw new OperationNotSupportedException();
+	}
 
 	//* Utility Methods *//
 	// Returns whether or not all Collections within the specified List are Empty
