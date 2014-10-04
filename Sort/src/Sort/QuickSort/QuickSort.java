@@ -16,8 +16,8 @@ public final class QuickSort<T extends Comparable<? super T>> extends AbstractSo
 {
 	//* Class Variables *//
 	// Public Variables
-	public static volatile int COMPARISONS = 0;
-	public static volatile boolean THREADED = true;
+	public static transient volatile int COMPARISONS = 0;
+	public static transient volatile boolean THREADED = true;
 
 	//* Sort Methods *//
 	// Returns a Sorted Version of the specified List of Comparable Elements

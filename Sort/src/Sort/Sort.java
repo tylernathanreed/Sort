@@ -10,6 +10,7 @@ package Sort;
 import java.util.List;
 import Sort.MergeSort.MergeSort;
 import Sort.QuickSort.QuickSort;
+import Sort.SelectionSort.SelectionSort;
 
 //* Sort Interface *//
 public final class Sort
@@ -22,6 +23,21 @@ public final class Sort
 	private static long stop;
 
 	//* Sort Methods *//
+	// Sorts the specified List using the Selection Sort Method
+	public static <T extends Comparable<? super T>> List<T> selectionSort(List<T> list)
+	{
+		start();
+
+		try { SelectionSort.sort(list); } catch(Exception ex) { ex.printStackTrace(); }
+
+		stop();
+
+		threads = 0;
+		comparisons = SelectionSort.COMPARISONS;
+
+		return list;
+	}
+
 	// Sorts the specified List using the Merge Sort Method
 	public static <T extends Comparable<? super T>> List<T> mergeSort(List<T> list)
 	{

@@ -27,7 +27,7 @@ public class Main
 		int length = length(args);
 
 		// Hard-Coded Arguments
-		sortType = "quick";
+		sortType = "selection";
 
 		// Display Command Line Parameters
 		System.out.println("Recognized Parameters:");
@@ -37,6 +37,9 @@ public class Main
 		if(hasFlag(args, "length")) System.out.println(" -> Length: " + length);
 
 		System.out.println();
+
+		// Display Sort Information
+		System.out.println("Using " + sortType + " Sort");
 
 		// Determine the Output Stream
 		// System.setOut(new PrintStream(new File("res/output.txt")));
@@ -59,6 +62,11 @@ public class Main
 		// Sort the List
 		switch(sortType)
 		{
+			// Selection Sort
+			case "selection":
+				Sort.selectionSort(list);
+				break;
+
 			// Quick Sort
 			case "quick":
 				Sort.quickSort(list);
@@ -71,6 +79,7 @@ public class Main
 
 			// Default
 			default:
+				System.out.println("Warning: Using Default Search!");
 				Collections.sort(list);
 				break;
 		}
