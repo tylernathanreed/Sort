@@ -19,6 +19,14 @@ An example of this would be the domain `[5,3,6,8,2,0,-9,1]`. The algorithm would
 
 Knowing that all elements up to index 0 are sorted, the algorthm starts looking for the next minimum, starting at `3`. Eventually, this will yield a sorted list of `[-9,0,1,2,3,5,6,8]` after Θ(n<sup>2</sup>) comparisons.
 
+<hr>
+
+While this is the typical algorithm for Selection Sort, I take it a step further by Multi-Threading it. To ensure that the threads don't walk all over each other and cause collision issues, I use a nested algorithm that I've called `selection`, in the spirit of Selection Sort.
+
+This algorithm takes two parameters: a list, and some index `k` that maps to an index within the list. This algorithm is tasked to find the `k`<sup>th</sup> smallest (or largest) element within the list. By creating as many threads as there are elements, this becomes an exhaustive and disjoint approach to the original Selection Sort algorithm.
+
+While the `selection` algorithm has Θ(n) runtime, giving Selection Sort the same runtime as before (being Θ(n<sup>2</sup>)), this runtime is now partially parallel, and thus may result in a faster actual runtime than its sequential predecessor.
+
 **Merge Sort** *(http://en.wikipedia.org/wiki/Merge_sort)*
 
 **Quick Sort** *(http://en.wikipedia.org/wiki/Quicksort)*
