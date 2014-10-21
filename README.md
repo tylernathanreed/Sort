@@ -3,5 +3,6 @@ Sort
 
 Contains various sorting Algorithms using various languages.
 
-Algorithms for each Language:
- - Java: Merge Sort, Quick Sort
+Languages for each Algorithm:
+ - Merge Sort - `Java`
+ - Quick Sort - `Java`
