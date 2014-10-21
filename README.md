@@ -9,8 +9,8 @@ Languages for each Algorithm:
 
 Below is an overview of each Algorithm, as well as specific details that may vary between implementations.
 
-*Selection Sort* **(http://en.wikipedia.org/wiki/Selection_sort)**
+**Selection Sort** *(http://en.wikipedia.org/wiki/Selection_sort)*
 
-*Merge Sort* **(http://en.wikipedia.org/wiki/Merge_sort)**
+**Merge Sort** *(http://en.wikipedia.org/wiki/Merge_sort)*
 
-*Quick Sort* **(http://en.wikipedia.org/wiki/Quicksort)**
+**Quick Sort** *(http://en.wikipedia.org/wiki/Quicksort)*
