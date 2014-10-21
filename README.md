@@ -7,9 +7,13 @@ Languages for each Algorithm:
  - Merge Sort - `Java`
  - Quick Sort - `Java`
 
+<hr>
+
 Below is an overview of each algorithm, as well as specific details that may vary between implementations.
 
+<hr>
 **Selection Sort** *(http://en.wikipedia.org/wiki/Selection_sort)*
+<hr>
 
 Selection Sort is one of the most basic algorithms for Comparison Sorts.
 
@@ -27,6 +31,10 @@ This algorithm takes two parameters: a list, and some index `k` that maps to an 
 
 While the `selection` algorithm has Θ(n) runtime, giving Selection Sort the same runtime as before (being Θ(n<sup>2</sup>)), this runtime is now partially parallel, and thus may result in a faster actual runtime than its sequential predecessor.
 
+<hr>
 **Merge Sort** *(http://en.wikipedia.org/wiki/Merge_sort)*
+<hr>
 
+<hr>
 **Quick Sort** *(http://en.wikipedia.org/wiki/Quicksort)*
+<hr>
