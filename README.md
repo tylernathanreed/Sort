@@ -17,7 +17,7 @@ Basically, given a set of comparable elements, let's say numbers, the algorithm 
 
 An example of this would be the domain `[5,3,6,8,2,0,-9,1]`. The algorithm would scan each element from left to right, keeping track of the smallest number it has seen. In this example, it would take 7 comparisons to find the minimum (That's one less than the length of the list, due to `5` being assumed as the minimum). As such, the algorithm would find `-9` to be the minimum, and therefore the next domain would be `[-9,3,6,8,2,0,5,1]`.
 
-Knowing that all elements up to index 0 are sorted, the algorthm starts looking for the next minimum, starting at `3`. Eventually, this will yield a sorted list of `[-9,0,1,2,3,5,6,8]` after `Θ(n<sup>2</sup>)` comparisons.
+Knowing that all elements up to index 0 are sorted, the algorthm starts looking for the next minimum, starting at `3`. Eventually, this will yield a sorted list of `[-9,0,1,2,3,5,6,8]` after Θ(n<sup>2</sup>) comparisons.
 
 **Merge Sort** *(http://en.wikipedia.org/wiki/Merge_sort)*
 
