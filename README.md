@@ -4,6 +4,7 @@ Sort
 Contains various Sorting Algorithms using various languages.
 
 Languages for each Algorithm:
+ - Selection Sort - `Java`
  - Merge Sort - `Java`
  - Quick Sort - `Java`
 
